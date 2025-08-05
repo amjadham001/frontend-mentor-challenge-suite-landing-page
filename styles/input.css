@@ -1,1 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+	/* suite breakpoints */
+	--breakpoint-xl: 90rem;
+
+	/* suite font */
+	--font-epilogue: "Epilogue", sans-serif;
+
+	/* suite colors */
+	--color-suite-neutral-900: #172339;
+	--color-suite-neutral-500: #49566d;
+	--color-suite-neutral-200: #f3ede7;
+	--color-suite-neutral-50: #faf8f6;
+
+	--color-suite-purple-500: #cb30e3;
+
+	/* suite gradient */
+	--suite-gradient: linear-gradient(
+		135deg,
+		#a060ff 0%,
+		#cb30e3 49.21%,
+		#ffa84e 100%
+	);
+}
+
+@layer components {
+	/* suite typography */
+	.suite-typo-1 {
+		@apply text-[2.375rem] leading-[110%] -tracking-[0.53px];
+
+		@variant md {
+			@apply text-[3.5rem] leading-[110%] -tracking-[0.78px];
+		}
+
+		@variant xl {
+			@apply text-[4.5rem] leading-[110%] -tracking-[1px];
+		}
+	}
+	.suite-typo-2 {
+		@apply text-[3rem] leading-[120%] -tracking-[0.5px];
+	}
+	.suite-typo-3 {
+		@apply text-[1.25rem] leading-[160%] tracking-[0.11px];
+	}
+	.suite-typo-4 {
+		@apply text-[1.125rem] leading-[160%] -tracking-[0.18px];
+	}
+	.suite-typo-5 {
+		@apply text-[1.125rem] leading-[160%] tracking-[0.1px];
+	}
+	.suite-typo-6 {
+		@apply text-[1rem] leading-[150%] -tracking-[0.16px];
+	}
+	.suite-typo-7 {
+		@apply text-[1rem] leading-[150%] tracking-[2.5px];
+	}
+	.suite-typo-8 {
+		@apply text-[0.9375rem] leading-[160%];
+	}
+
+	/* suite logo */
+	.suite-logo {
+		@apply w-19.5;
+	}
+
+	/* suite icon */
+	.suite-icon {
+		@apply flex size-6 items-center justify-center transition;
+
+		svg {
+			@apply fill-current;
+		}
+
+		@variant hover {
+			@apply scale-110;
+		}
+	}
+
+	/* suite buttons */
+	.suite-btn {
+		@apply rounded-md text-[1rem] leading-[150%] font-bold -tracking-[0.16px] capitalize transition;
+
+		@variant focus {
+			@apply outline-suite-neutral-900 outline-3 outline-offset-3;
+		}
+	}
+	.suite-btn--outlined {
+		@apply bg-suite-neutral-50 text-suite-neutral-900 border-suite-neutral-900 border px-6 pt-4 pb-3;
+
+		@variant hover {
+			@apply bg-suite-neutral-900 text-suite-neutral-50 cursor-pointer;
+		}
+	}
+	.suite-btn--filled {
+		@apply bg-suite-neutral-900 text-suite-neutral-50 px-8 pt-5 pb-4;
+
+		@variant hover {
+			@apply cursor-pointer bg-(image:--suite-gradient);
+		}
+	}
+}
