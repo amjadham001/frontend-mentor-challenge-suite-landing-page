@@ -3,6 +3,7 @@
 
 @theme {
 	/* suite breakpoints */
+	--breakpoint-sm: 20rem;
 	--breakpoint-xl: 90rem;
 
 	/* suite font */
@@ -26,6 +27,12 @@
 }
 
 @layer components {
+	/* suite container */
+	.suite-container {
+		@apply px-4 md:px-8 xl:px-42;
+		@apply mx-auto max-w-93.75 md:max-w-192 xl:max-w-360;
+	}
+
 	/* suite typography */
 	.suite-typo-1 {
 		@apply text-[2.375rem] leading-[110%] -tracking-[0.53px];
@@ -87,7 +94,11 @@
 		}
 	}
 	.suite-btn--outlined {
-		@apply bg-suite-neutral-50 text-suite-neutral-900 border-suite-neutral-900 border px-6 pt-4 pb-3;
+		@apply bg-suite-neutral-50 text-suite-neutral-900 border-suite-neutral-900 border px-5 pt-4 pb-3;
+
+		@variant md {
+			@apply px-6;
+		}
 
 		@variant hover {
 			@apply bg-suite-neutral-900 text-suite-neutral-50 cursor-pointer;
