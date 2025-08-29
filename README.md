@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/amjadham001/suite-landing-page.git)
-- Live Site URL: [Live Demo](https://amjadham001.github.io/suite-landing-page/)
+- Solution URL: [GitHub Repository](https://github.com/amjadham001/frontend-mentor-challenge-suite-landing-page.git)
+- Live Site URL: [Live Demo](https://amjadham001.github.io/frontend-mentor-challenge-suite-landing-page/)
 
 ## My process
 
